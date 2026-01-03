@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamento | Residencial Altos do Horizonte</title>
+</head>
+<body>
+
+    <header>
+        <h1>Residencial Altos do Horizonte</h1>
+        <nav>
+            <ul>
+                <li><a href="#o-projeto">O Projeto</a></li>
+                <li><a href="#apartamentos">Plantas</a></li>
+                <li><a href="#lazer">Lazer</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>Viva no topo da cidade</h2>
+            <p>Conforto, segurança e uma vista definitiva para o parque.</p>
+            <button onclick="document.getElementById('contato').scrollIntoView();">Quero conhecer</button>
+        </section>
+
+        <section id="o-projeto">
+            <h3>Sobre o Empreendimento</h3>
+            <p>O Altos do Horizonte foi projetado para quem busca exclusividade. Torre única em um terreno de 2.000m², com arquitetura contemporânea e acabamento de alto padrão.</p>
+            <ul>
+                <li>Torre Única</li>
+                <li>4 apartamentos por andar</li>
+                <li>3 Elevadores inteligentes</li>
+                <li>Portaria Blindada 24h</li>
+            </ul>
+        </section>
+
+        <section id="apartamentos">
+            <h3>Tipologias e Plantas</h3>
+            
+            <article class="unidade" data-tipo="tipo-a">
+                <h4>Apartamento Tipo A - Garden</h4>
+                <ul class="detalhes-unidade">
+                    <li><strong>Área:</strong> 120m²</li>
+                    <li><strong>Quartos:</strong> 3 Dormitórios (1 Suíte)</li>
+                    <li><strong>Vagas:</strong> 2 vagas demarcadas</li>
+                    <li><strong>Diferencial:</strong> Terraço privativo com churrasqueira</li>
+                </ul>
+            </article>
+
+            <article class="unidade" data-tipo="tipo-b">
+                <h4>Apartamento Tipo B - Padrão</h4>
+                <ul class="detalhes-unidade">
+                    <li><strong>Área:</strong> 85m²</li>
+                    <li><strong>Quartos:</strong> 2 Dormitórios (2 Suítes)</li>
+                    <li><strong>Vagas:</strong> 1 ou 2 vagas</li>
+                    <li><strong>Diferencial:</strong> Varanda gourmet integrada à cozinha</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="lazer">
+            <h3>Lazer e Condomínio</h3>
+            <p>Tudo o que você precisa sem sair de casa.</p>
+            <ul id="lista-lazer">
+                <li>Piscina com raia de 25m aquecida</li>
+                <li>Academia completa (Technogym)</li>
+                <li>Espaço Coworking com sala de reunião</li>
+                <li>Salão de Festas Gourmet</li>
+                <li>Brinquedoteca e Playground</li>
+                <li>Pet Place com lavatório</li>
+                <li>Minimercado autônomo</li>
+            </ul>
+        </section>
+
+        <section id="localizacao">
+            <h3>Localização Privilegiada</h3>
+            <address>
+                <strong>Endereço do Stand de Vendas e Obra:</strong><br>
+                Rua das Magnólias, 450 - Bairro Jardim Europa<br>
+                São Paulo - SP, CEP 01450-000
+            </address>
+            <p>Próximo ao Shopping Central e a 5 minutos da estação de metrô Linha Azul.</p>
+        </section>
+
+        <section id="condicoes-pagamento">
+            <h3>Condições Comerciais</h3>
+            <div class="tabela-pagamento">
+                <p><strong>Fluxo de Obras (36 meses):</strong></p>
+                <ul>
+                    <li>Entrada facilitada: 12% no ato</li>
+                    <li>Mensais: 30 parcelas fixas</li>
+                    <li>Anuais: 3 intermediárias</li>
+                    <li>Financiamento: Saldo de 60% financiado por qualquer banco na entrega das chaves</li>
+                </ul>
+                <p><em>Aceitamos seu carro como parte da entrada (sujeito a avaliação).</em></p>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h3>Cadastre-se para receber a tabela de preços</h3>
+            <form action="/api/cadastro" method="POST">
+                <div>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="telefone">WhatsApp:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) 9XXXX-XXXX">
+                </div>
+
+                <div>
+                    <label for="interesse">Tenho interesse em:</label>
+                    <select id="interesse" name="interesse">
+                        <option value="tipo-a">Apto 120m² (3 Dorms)</option>
+                        <option value="tipo-b">Apto 85m² (2 Suítes)</option>
+                        <option value="duvida">Apenas tirar dúvidas</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>
+                        <input type="checkbox" name="aceite_termos" required>
+                        Aceito receber contato via WhatsApp.
+                    </label>
+                </div>
+
+                <button type="submit">Solicitar Contato</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Incorporadora Horizonte. Todos os direitos reservados.</p>
+        <p>RI: R.02/123.456 - 1º Ofício de Registro de Imóveis.</p>
+    </footer>
+
+</body>
+</html>
